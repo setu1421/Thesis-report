@@ -1,0 +1,234 @@
+% ###########################################################
+%
+% LaTeX Template for undergraduate thesis book and report
+%
+% Author: Md. Ashiqur Rahman (Opu)
+% Roll: 1007035
+% 
+% Special Contents:
+%   * Sub-figures
+%   * Tikz Image for flowchart
+%
+% Rename the chapters as per your requirements
+%
+% Please do not remove Template author name from this file
+%
+% ###########################################################
+
+
+\documentclass[12pt]{report}
+\usepackage[utf8x]{inputenc}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+\usepackage{hyperref}
+%\usepackage{chngpage}
+%\usepackage{subfig}
+%\usepackage{subfigure}
+%\usepackage{float}
+\usepackage[a4paper,tmargin=1.1in,bmargin=1.1in,lmargin=1.2in,rmargin=1in]{geometry}
+%\usepackage{fancyhdr}
+%\pagestyle{fancy}
+\usepackage{enumitem}
+\usepackage[algoruled,boxed,lined]{algorithm2e}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage[font={scriptsize}]{subcaption}
+%\usepackage{subcaption}
+\usepackage{array}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric,arrows,positioning}
+\tikzstyle{startstop}=[ellipse, minimum width=3cm, minimum height=0.6cm,text centered, draw=black, fill=white]
+\tikzstyle{io}=[trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=0.6cm, text centered, draw=black, fill=white]
+\tikzstyle{process}=[rectangle, minimum width=2cm, minimum height=0.6cm, text centered, draw=black, fill=white]
+\tikzstyle{decision}=[diamond, aspect=2, minimum width=1.5cm, minimum height=0.8cm, text centered, draw=black, fill=white]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+\tikzset{draw}
+
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[chapter] % reset theorem numbering for each chapter
+\newtheorem{theory}{Theorem}
+\newtheorem{tlem}{Theorem}
+\newtheorem{texmpl}{Theorem}
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition} % definition numbers are dependent on theorem numbers
+\newtheorem{exmp}[texmpl]{Example} % same for example numbers
+\newtheorem{lem}[tlem]{Lemma}
+
+\newcommand\textbox[1]{%
+  \parbox{.333\textwidth}{#1}%
+}
+
+
+\usepackage{titlesec}
+ 
+
+\makeatletter
+\def\@makechapterhead#1{%
+  \vspace*{0\p@}%
+  {\parindent \z@ \centering
+    \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+      \if@mainmatter
+        \large \bfseries \@chapapp\space \thechapter
+        \par\nobreak
+        \vskip 20\p@
+      \fi
+    \fi
+    \interlinepenalty\@M
+    \LARGE \bfseries #1\par\nobreak
+    \vskip 40\p@
+  }}
+\def\@schapter#1{\if@twocolumn
+                   \@topnewpage[\@makeschapterhead{#1}]%
+                 \else
+                   \@makeschapterhead{#1}%
+                   \@afterheading
+                 \fi}
+\def\@makeschapterhead#1{%
+  \vspace*{0\p@}%
+  {\parindent \z@ \centering
+    \normalfont
+    \interlinepenalty\@M
+    \Large \bfseries  #1\par\nobreak
+    \vskip 40\p@
+  }}
+
+\renewcommand\section{\@startsection {section}{1}{\z@}%
+                                   {-6ex \@plus -1ex \@minus -.2ex}%
+                                   {2.3ex \@plus.2ex}%
+                                   {\normalfont\Large\bfseries}}
+
+\renewcommand\subsection{\@startsection {subsection}{1}{\z@}%
+                                   {-4ex \@plus -1ex \@minus -.2ex}%
+                                   {2.3ex \@plus.2ex}%
+                                   {\normalfont\large\bfseries}}
+
+\makeatother
+
+\begin{document}
+
+\pagenumbering{roman}
+\setcounter{page}{1}
+
+
+% ############################################################################################################
+%
+% Title Page (only if you want to make it with LaTeX)
+%
+\begin{figure}
+  \centering
+  \includegraphics[width=2cm]{kuetlogo.png}
+\end{figure}
+
+\title{
+    {An Approach for Multi Label Image Classification Using Single Label Convolutional Neural Network Classifier with Objectness Measure and Selective Search}\\
+    {\includegraphics[width=4cm]{gap.png}}\\
+    {\includegraphics[width=4cm]{gap.png}}\\
+    {\includegraphics[width=4cm]{gap.png}}\\
+}
+
+\author{Setu Basak\\
+        Roll: 1107043\\
+        Shubhashis Karmakar\\
+        Roll: 1107001\\\\
+        Supervisor: Dr. Kazi Md. Rokibul Alam\\
+        Professor, CSE, KUET\\\\\\
+}
+
+\date{April, 2016}
+%
+% ############################################################################################################
+
+
+
+\setlength{\parindent}{1em}
+%\setlength{\parskip}{1em}
+
+%\usepackage{titlesec}
+
+\titlespacing*{\section}
+{0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+\titlespacing*{\subsection}
+{0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+
+%\begin{document}
+
+\maketitle
+
+\addtocontents{toc}{~\hfill\textbf{Page}\par}
+
+\chapter*{Acknowledgement}
+\addcontentsline{toc}{chapter}{Acknowledgement}
+%\renewcommand{\abstractname}{Acknowledgements}
+%\begin{abstract}
+With due homage and honor, we want to express our gratitude to Almighty Allah.\\
+
+
+\noindent We express our indebtedness to our dedicated supervisor Dr. Kazi Md. Rokibul Alam (Professor, Department of Computer Science and Engineering, KUET) for his necessary guidance, suggestions and encouragement to all phases of our work. We
+would also like to thank all the teachers who've been much helpful and encouraging in completion of our thesis work.\\
+
+\noindent\textbox{\hfill}\textbox{\hfil \hfil}\textbox{\hfill \textbf{Authors}}
+%\end{abstract}
+
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+%\renewcommand{\abstractname}{Abstract}
+%\begin{abstract}
+Single label image classification has been promisingly demonstrated using Convolutional Neural Network (CNN). However, how this CNN will fit for multi-label images is still difficult to solve. It is mainly difficult due to the complex underlying
+object layouts and insufficient multi-label training images. In this work, we propose an approach for classifying multi-label image by a trained single label classifier using CNN with objectness measure and selective search. We took two established image segmentation techniques for segmenting a single image which is a multi-label image into some segmented images. Then we forwarded the images to our trained CNN and predicted the labels of the segmented images by generalizing the result. Our single-label image classifier gives 87\% accuracy on CIFAR-10 dataset. Using objectness measure with CNN gives us 51\% accuracy on a multi-label dataset and gives upto 57\% accuracy using selective search both considering top-4 labels which is significantly good for a simple approach rather than a complex approach of multi-label classifier using CNN.
+
+%\end{abstract}
+
+
+%\chapter*{Dedication}
+%To mum and dad
+
+\tableofcontents
+%\addcontentsline{toc}{chapter}{Contents}
+\listoffigures
+\addcontentsline{toc}{chapter}{List of Figures}
+%\listoftables
+%\addcontentsline{toc}{chapter}{List of Tables}
+
+%\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+
+\chapter{Introduction}
+\setcounter{page}{2}
+\pagenumbering{arabic}
+\input{chapters/introduction}
+
+\chapter{Related Works}
+\input{chapters/literature}
+
+\chapter{Initial Attempts}
+\input{chapters/prevapproaches}
+
+\chapter{Dataset}
+\input{chapters/dataset}
+
+\chapter{The Architecture}
+\input{chapters/systemmodel}
+
+%\chapter{Proposed Algorithm}
+%\input{chapters/proposedalgo}
+
+\chapter{Experimental Result}
+\input{chapters/performance}
+
+\chapter{Tools and Recommendations for Future Works}
+\input{chapters/tools}
+
+\chapter{Conclusion}
+\input{chapters/conclusion}
+
+%\appendix
+%\chapter{Appendix}
+%\input{chapters/appendix}
+
+\input{Reference}
+
+\end{document}

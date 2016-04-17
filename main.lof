@@ -1,0 +1,30 @@
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces (a),(b)Some examples from CIFAR-10 \cite {17}. The objects in single-label images are usually roughly aligned.(c),(d) However, the assumption of object alignment is not valid for multi-label images. Also note the partial visibility and occlusion between objects in the multi-label images.\relax }}{2}{figure.caption.2}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Example of a 5-fold cross-validation run for the parameter k.\relax }}{7}{figure.caption.3}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Pixel-based distances on high-dimensional data (and images especially) can be very unintuitive. An original image (left) and three other images next to it that are all equally far away from it based on L2 pixel distance. Clearly, the pixel-wise distance does not correspond at all to perceptual or semantic similarity.\relax }}{8}{figure.caption.4}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Decreasing loss as iteration increases\relax }}{10}{figure.caption.5}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Left: A 2-layer Neural Network (one hidden layer of 4 neurons (or units) and one output layer with 2 neurons), and three inputs. Right: A 3-layer neural network with three inputs.\relax }}{10}{figure.caption.6}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Larger Neural Networks can represent more complicated functions. But more layers can also cause overfitting(example with 20 hidden neurons)\relax }}{11}{figure.caption.7}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces The effects of regularization strength\relax }}{11}{figure.caption.8}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Linear classifier fails to learn the spiral dataset. Accuracy was around $49\%$\relax }}{12}{figure.caption.9}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Neural Network classifier is significantly better achieving around $98\%$ accuracy\relax }}{12}{figure.caption.10}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces CIFAR-10 Dataset\relax }}{14}{figure.caption.11}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Multi Label Image\relax }}{15}{figure.caption.12}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Convolutional Neural Network for classifying single label images(Cropped Down)\relax }}{16}{figure.caption.13}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Spatial Convolution with kernel size 5x5\relax }}{18}{figure.caption.14}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces \relax }}{20}{figure.caption.15}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Architecture of Convolutional neural network\relax }}{22}{figure.caption.16}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces CIFAR-10 Confusion Matrix\relax }}{23}{figure.caption.17}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Scores for the sample image\relax }}{24}{figure.caption.18}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Result for the sample image for Objectness Measures\relax }}{24}{figure.caption.19}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Result for the sample image for Selective Search\relax }}{24}{figure.caption.20}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Sample Multi-Label Image\relax }}{25}{figure.caption.21}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Result for multi-label images for Objectness Measures\relax }}{25}{figure.caption.22}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Result for multi-label images for Selective Search\relax }}{25}{figure.caption.23}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
